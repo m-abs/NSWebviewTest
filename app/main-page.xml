@@ -1,0 +1,9 @@
+<Page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:customControls="xml-declaration/my-web-view"
+  loaded="pageLoaded"
+>
+  <StackLayout>
+    <customControls:MyWebView id="webview" src="http://madforandrer.dk"></customControls:MyWebView>
+  </StackLayout>
+</Page>
