@@ -20,7 +20,7 @@ class UIWebViewDelegateImpl extends NSObject implements UIWebViewDelegate {
             trace.write("UIWebViewDelegateClass.webViewShouldStartLoadWithRequestNavigationType(" + request.URL.absoluteString + ", " + navigationType + ")", trace.categories.Debug);
 
             let urlOverrideHandlerFn = owner.urlOverrideHandler;
-            if (urlOverrideHandlerFn && urlOverrideHandlerFn(url) === true) {
+            if (urlOverrideHandlerFn && urlOverrideHandlerFn(request.URL.absoluteString) === true) {
               return false;
             }
 
