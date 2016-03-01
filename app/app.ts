@@ -1,2 +1,4 @@
-var application = require("application");
-application.start({ moduleName: "main-page" });
+import application = require('application');
+application.start({
+  moduleName: 'views/library/library'
+});

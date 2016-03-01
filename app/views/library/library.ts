@@ -1,6 +1,6 @@
 import view = require("ui/core/view");
 
-import {MyWebView} from './xml-declaration/my-web-view/my-web-view';
+import {MyWebView} from '../../xml-declaration/my-web-view/my-web-view';
 
 import {openUrl} from 'utils/utils';
 
