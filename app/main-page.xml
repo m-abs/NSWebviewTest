@@ -4,6 +4,6 @@
   loaded="pageLoaded"
 >
   <StackLayout>
-    <customControls:MyWebView id="webview" src="http://madforandrer.dk"></customControls:MyWebView>
+    <customControls:MyWebView id="webview" src="https://nota.dk"></customControls:MyWebView>
   </StackLayout>
 </Page>

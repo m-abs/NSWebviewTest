@@ -1,15 +1,16 @@
 {
-	"nativescript": {
-		"id": "org.nativescript.NSWebviewTest",
-		"tns-android": {
-			"version": "1.6.2"
-		}
-	},
-	"dependencies": {
-		"tns-core-modules": "1.6.2"
-	},
-	"devDependencies": {
-		"nativescript-dev-typescript": "^0.3.1",
-		"typescript": "^1.8.2"
-	}
+  "nativescript": {
+    "id": "org.nativescript.NSWebviewTest",
+    "tns-android": {
+      "version": "1.6.2"
+    }
+  },
+  "dependencies": {
+    "nativescript-webview-interface": "^1.1.1",
+    "tns-core-modules": "1.6.2"
+  },
+  "devDependencies": {
+    "nativescript-dev-typescript": "^0.3.1",
+    "typescript": "^1.8.2"
+  }
 }
