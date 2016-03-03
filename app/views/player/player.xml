@@ -1,0 +1,13 @@
+<Page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:customControls="xml-declaration/my-web-view"
+  loaded="pageLoaded"
+  navigatingTo="pageNavigatingTo"
+  showingModally="onShowingModally"
+  shownModally="onShownModally"
+>
+  <StackLayout>
+    <customControls:MyWebView id="webview" src="http://localhost:9000/"></customControls:MyWebView>
+  </StackLayout>
+</Page>
+
