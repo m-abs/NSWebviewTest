@@ -1,10 +1,9 @@
 <Page
   xmlns="http://schemas.nativescript.org/tns.xsd"
-  xmlns:customControls="xml-declaration/my-web-view"
   loaded="pageLoaded"
+  unloaded="pageUnloaded"
   navigatingTo="pageNavigatingTo"
 >
-  <StackLayout>
-    <customControls:MyWebView id="webview" src="https://nota.dk/bibliotek/bog/bunker-137"></customControls:MyWebView>
+  <StackLayout id="layout">
   </StackLayout>
 </Page>
