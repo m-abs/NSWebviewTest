@@ -1,7 +1,8 @@
 import view = require("ui/core/view");
 import application = require("application");
 
-import {MyWebView} from '../../xml-declaration/my-web-view/my-web-view';
+import {MyWebView} from 'my-web-view';
+import {WebViewInterface} from 'nativescript-webview-interface';
 import {StackLayout} from 'ui/layouts/stack-layout';
 
 import {openUrl} from 'utils/utils';
@@ -14,6 +15,7 @@ const webView: MyWebView = uibuilder.load({
   name: 'MyWebView'
 });
 
+let oWebViewInterface: WebViewInterface;
 let webViewInited = false;
 
 /*
@@ -29,6 +31,12 @@ webView._createUI = function() {
 
   if (!webViewInited) {
     oldCreateFn.call(webView);
+
+    oWebViewInterface = new WebViewInterface(webView);
+
+    // WebViewInterface unbinds a few properties on 'unloaded', prevent that.
+    webView.off('unloaded');
+
     webViewInited = true;
   } else {
     // The webview triggers a property-change on src/url, so the page is reloaded.

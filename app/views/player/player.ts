@@ -1,7 +1,7 @@
 import view = require("ui/core/view");
 import pages = require("ui/page");
 
-import {MyWebView} from '../../xml-declaration/my-web-view/my-web-view';
+import {MyWebView} from 'my-web-view';
 
 import {openUrl} from 'utils/utils';
 
@@ -18,10 +18,10 @@ export function pageLoaded(args) {
   if (webView.android) {
     webView.android.getSettings().setDomStorageEnabled(true);
   }
+
   oWebViewInterface = new WebViewInterface(webView);
 
   webView.on("loadFinished", (e) => {
-    return;
     console.log('loadFinishedEvent', e);
 
     oWebViewInterface.callJSFunction('lytHandleEvent',['play-time-update', page.bindingContext.bookId, 0], function(result) {
